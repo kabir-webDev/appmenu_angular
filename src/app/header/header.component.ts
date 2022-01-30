@@ -6,6 +6,12 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./header.component.less"],
 })
 export class HeaderComponent implements OnInit {
+  setRole(role: string) {
+    localStorage.setItem("role", role);
+  }
+  removeRole() {
+    localStorage.removeItem("role");
+  }
   constructor() {}
 
   ngOnInit(): void {}
